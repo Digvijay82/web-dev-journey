@@ -34,7 +34,39 @@ body {
   @media (max-width: 768px) {  
     .navbar ul {  
       flex-direction: column;  
-      align-items: center;  
-      gap: 1rem;  
+      gap: 0.5rem; /* Reduce space between links */  
+      padding: 1rem; /* Add padding */  
     }  
-  }
+  } 
+  /* Projects Grid */  
+  .projects {  
+    display: grid;  
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Reduced min width */  
+    gap: 1rem; /* Smaller gap on mobile */  
+    padding: 1rem; /* Less padding */  
+  }  
+  /* Mobile-first media query */  
+@media (max-width: 768px) {  
+  .projects {  
+    grid-template-columns: 1fr; /* Single column on mobile */  
+  }  
+}  
+
+/* Project Card Design */  
+.project-card {  
+  background: white;  
+  border-radius: 10px;  
+  padding: 1.5rem;  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+  transition: transform 0.3s ease;  
+}  
+
+.project-card:hover {  
+  transform: translateY(-5px);  /* Adds a hover animation */  
+}  
+
+.project-card {  
+  /* Existing styles */  
+  word-break: break-word; /* Prevent long text from overflowing */  
+  margin: 0 1rem; /* Add side margins on mobile */  
+} 
